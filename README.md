@@ -8,7 +8,7 @@ Load the X-Tension (HIKVISION.dll or whatever you want to name it) and execute i
 
 Now all video files should be visible in the volume snapshot.
 
-https://github.com/user-attachments/assets/b473db7b-ccce-4a2a-8038-1a0e0e37b706
+![HIKVISION](https://github.com/user-attachments/assets/4c9f088d-bf25-4c1b-83a6-177b6ada5866)
 
 Video files named '19.01.2038 04:14:07' indicates a file which was not fully finished recording, but is still viewable.
 
