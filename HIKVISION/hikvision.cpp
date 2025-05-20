@@ -250,6 +250,7 @@ DWORD readPageEntries(HANDLE hItem, HikPageList& hikPageList)
 DWORD createVSItems(HANDLE hItem, HikHeader& hikHeader ,HikPageList& hikPageList)
 {
 	const std::wstring itemType = std::wstring(L"mp4\0");
+	int folderCounter = 0;
 
 	std::unordered_map<uint64_t, std::vector<HikDataBlockEntry>> fileStructure;
 
@@ -288,7 +289,12 @@ DWORD createVSItems(HANDLE hItem, HikHeader& hikHeader ,HikPageList& hikPageList
 
 		uint64_t folderSize = fileCounter * hikHeader.dataBlockSize;
 		XWF_SetItemSize(parentId, folderSize);
+		folderCounter++;
 	}
+	
+	// Declare that the unpartitioned space or unknown filesystem got children and how many
+	XWF_SetItemInformation(0, XWF_ITEM_INFO_FLAGS, 0x00000002);
+	XWF_SetItemInformation(0, XWF_ITEM_INFO_FILECOUNT, folderCounter);
 
 	return 0;
 }
