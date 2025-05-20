@@ -1,4 +1,4 @@
-# X-Ways-HIKVISION-X-Tension
+  # X-Ways-HIKVISION-X-Tension
 A X-Ways Forensics X-Tension to parse the HIKVISION filesystem 'HIK.2011.03.08'.
 
 # Usage
@@ -8,7 +8,13 @@ Load the X-Tension (HIKVISION.dll or whatever you want to name it) and execute i
 
 Now all video files should be visible in the volume snapshot.
 
-![HIKVISION](https://github.com/user-attachments/assets/4c9f088d-bf25-4c1b-83a6-177b6ada5866)
+For volumes (like DD images):
+
+![volume](https://github.com/user-attachments/assets/7103869f-a124-4883-9e37-d3b682136f0d)
+
+For disk images (physical drives or encase / E01):
+
+![disk](https://github.com/user-attachments/assets/61cb577d-3dc7-479a-aa1f-931fc274d60a)
 
 Video files named '19.01.2038 04:14:07' indicates a file which was not fully finished recording, but is still viewable.
 
